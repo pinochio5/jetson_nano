@@ -31,6 +31,6 @@ git clone https://github.com/AlexeyAB/darknet.git
 By default, you will open the camera, display the images captured.
 
 And run the Object Detection Demo.
-<pre><code>python opencv_camera.py</code></pre>
+<pre><code>python3 trt_yolo.py --gstr "nvarguscamerasrc ! video/x-raw(memory:NVMM), width=1280, height=720, format=NV12, framerate=30/1 ! nvvidconv flip-method=2 ! video/x-raw, width=1280, height=720, format=BGRx ! videoconvert ! video/x-raw, format=BGR ! appsink" -m yolov4-tiny</code></pre>
 
 Have Fun~

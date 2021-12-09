@@ -9,7 +9,7 @@ python3 -m pip install pycuda==2018.4
 
 # Get model
 tar -xzvf ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz .
-</code></pre>
+
 [Link: TensorFlow on arm](https://github.com/lhelontra/tensorflow-on-arm/releases),
 
 [Link: SSD mobile](http://download.tensorflow.org/models/object_detection/ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz),
@@ -17,17 +17,17 @@ tar -xzvf ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz .
 [Model Zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)
 
 git clone https://github.com/AlexeyAB/darknet.git
-
+</code></pre>
 
 ## 2.Check OpenCV for python
-<p>pip install opencv==4.4.1
-</p>
+<pre><code>python3 -m pip install opencv==4.4.1
+</code></pre>
 
 ## 3.weight2onnx
-python3 yolo_to_onnx.py -m yolov4_tiny
+<pre><code>python3 yolo_to_onnx.py -m yolov4_tiny</code></pre>
 
 ## 4.onnx2tensorRT
-python3 onnx_to_tensorrt.py -m yolov4_tiny
+<pre><code>python3 onnx_to_tensorrt.py -m yolov4_tiny</code></pre>
 
 ## 5.Test
 By default, you will open the camera, display the images captured.

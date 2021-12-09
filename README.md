@@ -1,5 +1,5 @@
-# Raspberry_Camera
-Tensorflow on Jetson Nano, OpenCV, SSDmobile
+# Jetson Nano & Raspberry_Camera
+Video recorder with improved performance image recognition function, TensorRT, OpenCV, yolov4, 
 
 ## 1.Download NUMPY ONNX PYCUDA and Install them
 <pre><code># Install TF1.8.0

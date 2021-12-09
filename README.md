@@ -1,9 +1,11 @@
 # Raspberry_Camera
 Tensorflow on Jetson Nano, OpenCV, SSDmobile
 
-## 1.Download SSDmobile model and Install Tensorflow  
+## 1.Download NUMPY ONNX PYCUDA and Install them
 <pre><code># Install TF1.8.0
-pip install tensorflow-1.8.0-cp27-none-linux_armv7l.whl
+python3 -m pip install onnx==1.4.1
+python3 -m pip install numpy==1.16.2
+python3 -m pip install pycuda==2018.4
 
 # Get model
 tar -xzvf ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz .
@@ -14,11 +16,20 @@ tar -xzvf ssdlite_mobilenet_v2_coco_2018_05_09.tar.gz .
 
 [Model Zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)
 
-## 2.Install OpenCV for python
-<p>pip install opencv-python
+git clone https://github.com/AlexeyAB/darknet.git
+
+
+## 2.Check OpenCV for python
+<p>pip install opencv==4.4.1
 </p>
 
-## 3.Test
+## 3.weight2onnx
+python3 yolo_to_onnx.py -m yolov4_tiny
+
+## 4.onnx2tensorRT
+python3 onnx_to_tensorrt.py -m yolov4_tiny
+
+## 5.Test
 By default, you will open the camera, display the images captured.
 
 And run the Object Detection Demo.

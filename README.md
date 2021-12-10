@@ -1,5 +1,6 @@
 # Jetson Nano & Raspberry_Camera
 Video recorder with improved performance image recognition function, TensorRT, OpenCV, yolov4, 
+
 [![o4zLi6.png](https://s1.ax1x.com/2021/12/10/o4zLi6.png)](https://imgtu.com/i/o4zLi6)
 
 ## 1.Download NUMPY ONNX PYCUDA and Install them
@@ -29,9 +30,12 @@ git clone https://github.com/AlexeyAB/darknet.git
 
 ## 5.Test
 By default, you will open the camera, display the images captured.
+
 [![o4zbIx.jpg](https://s1.ax1x.com/2021/12/10/o4zbIx.jpg)](https://imgtu.com/i/o4zbIx)
 
 And run the Object Detection Demo.
 <pre><code>python3 trt_yolo.py --gstr "nvarguscamerasrc ! video/x-raw(memory:NVMM), width=1280, height=720, format=NV12, framerate=30/1 ! nvvidconv flip-method=2 ! video/x-raw, width=1280, height=720, format=BGRx ! videoconvert ! video/x-raw, format=BGR ! appsink" -m yolov4_tiny</code></pre>
+
 [![o4zWGT.jpg](https://s1.ax1x.com/2021/12/10/o4zWGT.jpg)](https://imgtu.com/i/o4zWGT)
+
 Have Fun~
